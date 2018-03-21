@@ -21,5 +21,8 @@ class TestResponse(unittest.TestCase):
         self.assertEqual(resp["msg"], None)
         self.assertEqual(resp["data"], None)
 
+    def test_basic_response_04(self):
+        self.assertRaises(ValueError, basic_response, '1')
+
 if __name__ == '__main__':
     unittest.main()
