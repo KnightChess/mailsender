@@ -3,6 +3,7 @@ import logging
 from flask import Flask
 from flask import jsonify
 from flask import request
+import mail
 
 from response import basic_response, SUCCESS, ERROR
 
@@ -20,7 +21,8 @@ def post_send():
     except KeyError:
         return jsonify(basic_response(ERROR, 'not enough arguments'))
 
-    # TODO: send mail here
+    # TODO: send(to, subject, content)
+    mail.send(to, subject, content)
     logging.debug('Sending mail to %s, subject %s, content %s' % (to, subject, content[:10]))
 
     return jsonify(basic_response(SUCCESS))
