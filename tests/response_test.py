@@ -1,5 +1,7 @@
 import unittest
+
 from response import *
+
 
 class TestResponse(unittest.TestCase):
     def test_basic_response_01(self):
@@ -12,6 +14,7 @@ class TestResponse(unittest.TestCase):
 
     def test_basic_response_03(self):
         self.assertRaises(ValueError, basic_response, 'z')
+
 
 if __name__ == '__main__':
     unittest.main()
