@@ -29,7 +29,3 @@ class TestResponse(unittest.TestCase):
     # test with incompatible value type
     def test_basic_response_04(self):
         self.assertRaises(ValueError, basic_response, '-1')
-
-
-if __name__ == '__main__':
-    unittest.main()

@@ -1,0 +1,14 @@
+{
+  "default": "test",
+  "accounts": [
+    {
+      "alias": "test",
+      "host": "foo.bar.com",
+      "port": 465,
+      "name": "Foobar",
+      "addr": "foo@bar.com",
+      "password": "foobar123",
+      "ssl": true
+    }
+  ]
+}
